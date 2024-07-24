@@ -21,6 +21,7 @@ public class LoginInterceptor implements HandlerInterceptor {
         Long userId = jwtTool.parseToken(token);
         // 3.存入上下文
         UserContext.setUser(userId);
+        System.out.println(Thread.currentThread());
         // 4.放行
         return true;
     }

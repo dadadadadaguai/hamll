@@ -39,3 +39,4 @@ hm:
       - /search/**
       - /users/login
       - /items/**
+      - /hi
