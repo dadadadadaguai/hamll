@@ -12,7 +12,7 @@ spring:
     password: ${hm.db.pw}
   cloud:
     nacos:
-      server-addr: 192.168.68.101 # nacos地址
+      server-addr: 192.168.68.101:8848 # nacos地址
 mybatis-plus:
   configuration:
     default-enum-type-handler: com.baomidou.mybatisplus.core.handlers.MybatisEnumTypeHandler
@@ -41,4 +41,7 @@ knife4j:
         group-name: default
         api-rule: package
         api-rule-resources:
-          - com.heima.trades.controller
+          - com.hmall.trades.controller
+feign:
+  .okhttp:
+    enabled: true

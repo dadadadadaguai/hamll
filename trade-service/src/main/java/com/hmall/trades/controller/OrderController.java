@@ -26,8 +26,8 @@ public class OrderController {
 
     @ApiOperation("创建订单")
     @PostMapping
-    public Long createOrder(@RequestBody OrderFormDTO orderFormDTO){
-        System.out.println("创建订单");
+    public Long createOrder(@RequestBody OrderFormDTO orderFormDTO,@RequestHeader(value = "user-info",required = false)String userInfo){
+        System.out.println("userInfo="+userInfo);
         return orderService.createOrder(orderFormDTO);
     }
 

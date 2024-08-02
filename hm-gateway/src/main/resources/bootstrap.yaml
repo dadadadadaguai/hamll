@@ -1,0 +1,14 @@
+spring:
+  application:
+    name: gateway
+  cloud:
+    nacos:
+      discovery:
+        server-addr: 192.168.68.101:8848
+      config:
+        extension-configs: yaml
+        shared-configs:
+          - dataId: shared-jdbc.yaml # 共享mybatis配置
+          - dataId: shared-log.yaml # 共享日志配置
+          - dataId: shared-swagger.yaml # 共享日志配置
+          - dataId: cart-service.yaml
